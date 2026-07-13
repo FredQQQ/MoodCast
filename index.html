@@ -92,7 +92,27 @@
           <div class="sky-position-stats"><div><b id="same-weather-count">—</b><small>同类天气</small></div><div><b id="same-weather-percent">—</b><small>今日占比</small></div></div>
           <button id="result-bulletin-button">查看今日人类精神天气 <span>→</span></button>
         </section>
-        <section class="invite-cta">
+        <section class="compatibility-card hidden" id="compatibility-card">
+          <div class="compatibility-glow"></div>
+          <div class="compatibility-head"><span>✦ TODAY'S SHARED WEATHER</span><b>今日相处气象</b></div>
+          <div class="compatibility-pair">
+            <div><strong id="compatibility-their-symbol">☁</strong><small>朋友的天气</small><b id="compatibility-their-weather"></b></div>
+            <i>×</i>
+            <div><strong id="compatibility-my-symbol">☀</strong><small>你的天气</small><b id="compatibility-my-weather"></b></div>
+          </div>
+          <p class="compatibility-kicker">WEATHER COMBINATION</p>
+          <h3 id="compatibility-title"></h3>
+          <p class="compatibility-summary" id="compatibility-summary"></p>
+          <div class="compatibility-details">
+            <article><span>☀ 天气组合</span><b id="compatibility-combo"></b><p id="compatibility-combo-copy"></p></article>
+            <article><span>◒ 相处建议</span><b id="compatibility-advice-title"></b><p id="compatibility-text"></p></article>
+            <article class="compatibility-score"><span>✦ 今日默契</span><b><em id="compatibility-score">--</em><small>%</small></b><p id="compatibility-score-label"></p></article>
+          </div>
+          <div class="compatibility-actions"><button class="compatibility-save" id="compatibility-save">保存相处气象图</button><button class="compatibility-share" id="compatibility-share">分享我们的相处气象 <i>↗</i></button></div>
+          <p class="share-status hidden" id="compatibility-share-status"></p>
+          <div class="compatibility-footer"><span>MENTAL WEATHER SERVICE</span><span>BY 卡卡卡卡皮巴拉</span></div>
+        </section>
+        <section class="invite-cta" id="invite-cta">
           <div class="invite-heading"><span>↗ TWO-PERSON FORECAST</span><h3>你们两个人，<br />会形成什么天气？</h3><p>发给一个朋友，各自完成观测，解锁只属于你们的相处气象。</p></div>
           <div class="compatibility-preview"><span>☀ 天气组合</span><span>◒ 相处建议</span><span>✦ 今日默契</span></div>
           <div class="gift-picker">
@@ -104,7 +124,6 @@
           <button class="invite-share-button" id="share-button"><span>解锁我们的相处气象</span><b>邀请朋友测试 · 看看你们合不合拍</b><i>→</i></button>
           <p class="share-status hidden" id="share-status"></p>
         </section>
-        <div class="compatibility-card hidden" id="compatibility-card"><span>今日相处气象</span><h3 id="compatibility-title"></h3><p id="compatibility-text"></p></div>
         <div class="accuracy-check" id="accuracy-check">
           <span>本次观测准确吗？</span>
           <div><button data-feedback="no">不太像</button><button data-feedback="some">有一点</button><button data-feedback="yes">被看穿了</button></div>
