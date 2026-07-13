@@ -1,0 +1,28 @@
+[build]
+  command = "mkdir -p dist && cp index.html app.js styles.css reveal.css features.css dist/"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-store"
+    X-Content-Type-Options = "nosniff"
+
+[[redirects]]
+  from = "/api/observation"
+  to = "/.netlify/functions/observation"
+  status = 200
+
+[[redirects]]
+  from = "/api/feedback"
+  to = "/.netlify/functions/feedback"
+  status = 200
+
+[[redirects]]
+  from = "/api/weather-today"
+  to = "/.netlify/functions/weather-today"
+  status = 200
