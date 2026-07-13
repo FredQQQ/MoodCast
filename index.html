@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101827" />
+    <title>精神气象台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .rare-badge{display:inline-block;margin-left:8px;padding:3px 7px;border:1px solid rgba(215,255,111,.55);border-radius:99px;color:var(--lime);font-size:8px;letter-spacing:.1em;vertical-align:1px}.accuracy-check,.compatibility-card{width:min(100%,520px);margin:18px auto;background:rgba(238,255,245,.055);border:1px solid var(--line);border-radius:18px;padding:16px}.accuracy-check>span{display:block;color:var(--muted);font-size:11px;letter-spacing:.08em;margin-bottom:11px}.accuracy-check>div{display:flex;gap:7px;flex-wrap:wrap}.accuracy-check button{border:1px solid var(--line);border-radius:99px;background:transparent;color:#b9c8cc;padding:8px 12px;cursor:pointer;font:500 12px Outfit,"Noto Sans SC",sans-serif}.accuracy-check button:hover{background:rgba(215,255,111,.13);border-color:rgba(215,255,111,.5);color:var(--lime)}.accuracy-check p{color:var(--lime);font:500 13px/1.6 "Noto Serif SC",serif;margin:4px 0 0}.weather-card[data-mood="bright"]{background:linear-gradient(160deg,#4d745f 0%,#315d60 48%,#1d4050 100%)}.weather-card[data-mood="calm"]{background:linear-gradient(160deg,#526878 0%,#304b5b 48%,#1a3344 100%)}.weather-card[data-mood="complex"]{background:linear-gradient(160deg,#5b536f 0%,#39465e 48%,#203346 100%)}.weather-card[data-mood="low"]{background:linear-gradient(160deg,#284b5a 0%,#203948 48%,#172b3c 100%)}.mode-picker{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:min(100%,470px);margin:0 auto 22px}.mode-button{border:1px solid var(--line);border-radius:14px;background:rgba(238,255,245,.04);color:#aebdc2;padding:12px 8px;cursor:pointer;font:500 12px Outfit,"Noto Sans SC",sans-serif}.mode-button b{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}.mode-button.active{border-color:rgba(215,255,111,.6);background:rgba(215,255,111,.1)}.invite-notice{width:min(100%,470px);margin:0 auto 20px;padding:12px 15px;border:1px solid rgba(215,255,111,.3);border-radius:14px;background:rgba(215,255,111,.07);color:#dcebbd;font:500 13px/1.6 "Noto Serif SC",serif}.history-panel{width:min(100%,470px);margin:26px auto 0;padding-top:20px;border-top:1px solid var(--line);text-align:left}.history-panel>span{color:var(--muted);font-size:10px;letter-spacing:.12em}.history-list{display:flex;gap:7px;overflow:auto;margin-top:11px;padding-bottom:3px}.history-chip{flex:0 0 auto;border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:rgba(238,255,245,.04)}.history-chip b{display:block;font:600 12px "Noto Serif SC",serif}.history-chip small{color:var(--muted);font-size:9px}.weather-stage{position:relative;width:min(100%,520px);margin:auto}.reveal-cloud{position:absolute;inset:0;z-index:8;display:flex;flex-direction:column;align-items:center;justify-content:center;border:0;border-radius:28px;overflow:hidden;cursor:pointer;background:radial-gradient(circle at 75% 25%,rgba(215,255,111,.23),transparent 28%),linear-gradient(150deg,#294756,#172837);color:var(--ink);transition:.65s opacity,.65s transform}.reveal-cloud::before,.reveal-cloud::after{content:"";position:absolute;width:420px;height:180px;border-radius:50%;background:rgba(173,204,207,.24);filter:blur(24px)}.reveal-cloud::before{left:-120px;top:120px}.reveal-cloud::after{right:-170px;top:280px}.reveal-cloud span{position:relative;z-index:2;display:block;font:600 20px/1.5 "Noto Serif SC",serif}.reveal-cloud small{position:relative;z-index:2;display:block;color:var(--lime);margin-top:10px;letter-spacing:.12em}.reveal-cloud.open{opacity:0;transform:scale(1.04);pointer-events:none}.compatibility-card{text-align:center}.compatibility-card span{color:var(--lime);font-size:10px;letter-spacing:.12em}.compatibility-card h3{font:700 20px "Noto Serif SC",serif;margin:9px 0}.compatibility-card p{color:#c2d0d2;font:500 13px/1.7 "Noto Serif SC",serif;margin:0}.share-status{text-align:center;color:var(--lime);font-size:12px;margin:10px auto 0}@media(max-width:520px){.mode-picker{grid-template-columns:1fr}.mode-button b{display:inline;margin-right:6px}.result-actions{flex-wrap:wrap}}
+    </style>
+    <link rel="stylesheet" href="reveal.css" />
+    <link rel="stylesheet" href="features.css" />
+    <style>
+      .creator-id{color:var(--lime);font-weight:600}.creator-signature{display:block;margin-top:7px;color:#91a4aa;font-size:10px;letter-spacing:.08em}.card-footer .creator-card-id{color:var(--lime);letter-spacing:.05em}
+    </style>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="site-header">
+        <a class="brand" id="brand-home" href="#" aria-label="精神气象台首页"><span class="brand-mark">◌</span>精神气象台</a>
+        <p><span class="creator-id">卡卡卡卡皮巴拉</span> · 仅供今日内心参考</p>
+      </header>
+
+      <section class="landing panel" id="landing">
+        <p class="eyebrow" id="landing-date">MOODCAST · DAILY INNER WEATHER</p>
+        <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+        <p class="hero-weather">☁</p>
+        <h1>今天你的内心，<br />是什么天气？</h1>
+        <p class="intro">不必解释近况。回答五个无关紧要的问题，<br />让我们观测一下你心里的气候。</p>
+        <div class="invite-notice hidden" id="invite-notice"></div>
+        <div class="mode-picker" aria-label="观测模式">
+          <button class="mode-button" data-mode="quick"><b>快速</b> 1 道题</button>
+          <button class="mode-button active" data-mode="standard"><b>标准</b> 5 道题</button>
+          <button class="mode-button" data-mode="night"><b>深夜</b> 温柔播报</button>
+        </div>
+        <button class="primary-button" id="start-button">开始观测 <span>→</span></button>
+        <p class="quiet-note">回答不会上传；历史记录只保存在这台设备。</p>
+        <div class="history-panel hidden" id="history-panel"><span>最近的本机气候</span><div class="history-list" id="history-list"></div></div>
+        <button class="atlas-entry" id="atlas-entry"><span>◫</span><b>精神天气图鉴</b><small id="atlas-progress">已发现 0 / 17</small></button>
+        <section class="public-weather" id="public-weather">
+          <div class="public-weather-head"><span>LIVE · PUBLIC WEATHER</span><b id="public-weather-total">正在连接公共气象台…</b></div>
+          <div class="public-weather-bars hidden" id="public-weather-bars"></div>
+          <p id="public-weather-note">只统计匿名天气类型，不记录你的具体答案。</p>
+          <button class="public-weather-more" id="public-weather-more">打开今日完整气象简报 <span>→</span></button>
+        </section>
+      </section>
+
+      <section class="quiz panel hidden" id="quiz" aria-live="polite">
+        <div class="quiz-topline"><span id="question-index">观测 01 / 05</span><span id="question-theme">设备状态</span></div>
+        <div class="progress"><i id="progress-bar"></i></div>
+        <p class="eyebrow">请凭第一反应选择</p>
+        <h2 id="question-text"></h2>
+        <div class="answers" id="answers"></div>
+        <button class="back-button" id="back-button">← 返回上一题</button>
+      </section>
+
+      <section class="result hidden" id="result">
+        <div class="result-actions top-actions"><button class="text-button" id="restart-top">← 返回首页</button><button class="text-button" id="download-button">保存天气卡 ↓</button></div>
+        <div class="weather-stage covered" id="weather-stage">
+        <button class="reveal-cloud" id="reveal-cloud" aria-label="拨开云层，查看天气结果">
+          <span class="reveal-glow"></span>
+          <span class="reveal-stars"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="reveal-bank reveal-bank-left"><i></i><i></i><i></i></span>
+          <span class="reveal-bank reveal-bank-right"><i></i><i></i><i></i></span>
+          <span class="reveal-mist"><i></i><i></i><i></i></span>
+          <span class="reveal-copy"><b><em>☁</em></b><strong>气象数据已经形成</strong><small>点击拨开云层</small></span>
+          <span class="reveal-particles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        </button>
+        <article class="weather-card" id="weather-card">
+          <div class="card-sky"><span class="sun"></span><span class="cloud cloud-a"></span><span class="cloud cloud-b"></span><span class="mist mist-a"></span><span class="mist mist-b"></span></div>
+          <div class="card-top"><span>精神气象台</span><span id="card-date"></span></div>
+          <p class="card-kicker">TODAY'S INNER FORECAST <span class="rare-badge hidden" id="rare-badge">稀有气象</span></p>
+          <p class="weather-symbol" id="weather-symbol">☁</p>
+          <h2 id="weather-title">社交大雾</h2>
+          <p class="weather-subtitle" id="weather-subtitle"></p>
+          <div class="weather-details"><div><span>精神能见度</span><strong id="visibility"></strong></div><div><span>回复消息体感</span><strong id="reply-temp"></strong></div></div>
+          <div class="probabilities" id="probabilities"></div>
+          <div class="card-extras">
+            <div class="companion"><span>今日伴生动物</span><b id="companion-name"></b><small id="companion-desc"></small></div>
+            <div class="fortune"><p><i>宜</i><span id="today-do"></span></p><p><i>忌</i><span id="today-dont"></span></p></div>
+          </div>
+          <div class="advice"><span>气象建议</span><p id="advice-text"></p></div>
+          <div class="card-footer"><span>MENTAL WEATHER SERVICE</span><span class="creator-card-id">BY 卡卡卡卡皮巴拉</span></div>
+        </article></div>
+        <p class="result-caption" id="result-caption"></p>
+        <section class="sky-position" id="sky-position">
+          <div class="sky-position-copy"><span>YOU ARE NOT ALONE IN THIS WEATHER</span><h3 id="same-weather-title">正在寻找同一片云层…</h3><p id="same-weather-copy">公共气象台正在更新今天的观测。</p></div>
+          <div class="sky-position-stats"><div><b id="same-weather-count">—</b><small>同类天气</small></div><div><b id="same-weather-percent">—</b><small>今日占比</small></div></div>
+          <button id="result-bulletin-button">查看今日人类精神天气 <span>→</span></button>
+        </section>
+        <section class="invite-cta">
+          <div class="invite-heading"><span>↗ TWO-PERSON FORECAST</span><h3>你们两个人，<br />会形成什么天气？</h3><p>发给一个朋友，各自完成观测，解锁只属于你们的相处气象。</p></div>
+          <div class="compatibility-preview"><span>☀ 天气组合</span><span>◒ 相处建议</span><span>✦ 今日默契</span></div>
+          <div class="gift-picker">
+            <span>顺便捎一件气象物资</span>
+            <div id="gift-options">
+              <button class="gift-button active" data-gift="sun">一小块阳光</button><button class="gift-button" data-gift="umbrella">不问原因的伞</button><button class="gift-button" data-gift="reply">免回复许可</button><button class="gift-button" data-gift="wind">下班方向的风</button><button class="gift-button" data-gift="water">精神热水</button><button class="gift-button" data-gift="cancel">取消计划理由</button>
+            </div>
+          </div>
+          <button class="invite-share-button" id="share-button"><span>解锁我们的相处气象</span><b>邀请朋友测试 · 看看你们合不合拍</b><i>→</i></button>
+          <p class="share-status hidden" id="share-status"></p>
+        </section>
+        <div class="compatibility-card hidden" id="compatibility-card"><span>今日相处气象</span><h3 id="compatibility-title"></h3><p id="compatibility-text"></p></div>
+        <div class="accuracy-check" id="accuracy-check">
+          <span>本次观测准确吗？</span>
+          <div><button data-feedback="no">不太像</button><button data-feedback="some">有一点</button><button data-feedback="yes">被看穿了</button></div>
+          <p class="hidden" id="feedback-thanks">收到。天气归你，气象台只负责参考。</p>
+        </div>
+        <section class="reverse-forecast">
+          <div class="reverse-heading"><span>REVERSE FORECAST</span><h3>今晚，你想变成什么天气？</h3><p>不是预测未来。只是为今天晚些时候，选一个想靠近的方向。</p></div>
+          <div class="reverse-options">
+            <button data-target="warming">↗ 缓慢升温</button><button data-target="still">— 无风午后</button><button data-target="curious">➶ 好奇心季风</button><button data-target="indoor">▧ 室内阳光</button><button data-target="lazy">☀ 慵懒晴天</button><button data-target="near">◎ 靠近一点</button>
+          </div>
+          <div class="reverse-result hidden" id="reverse-result"><span>今晚预计</span><h4 id="reverse-title"></h4><p id="reverse-action"></p><small>不用完成得很好。靠近一点就算预报生效。</small></div>
+        </section>
+      </section>
+
+      <section class="bulletin-page hidden" id="bulletin-page">
+        <div class="bulletin-nav"><button class="text-button" id="bulletin-back">← 返回</button><span>LIVE · DAILY BULLETIN</span></div>
+        <article class="bulletin-card" id="bulletin-card">
+          <div class="bulletin-orb"></div>
+          <div class="bulletin-card-head"><span>精神气象台 · 大众观测</span><span id="bulletin-date"></span></div>
+          <p class="bulletin-kicker">TODAY'S HUMAN WEATHER</p>
+          <p class="bulletin-symbol" id="bulletin-symbol">◌</p>
+          <h1 id="bulletin-title">正在汇总今日天气</h1>
+          <p class="bulletin-lead" id="bulletin-lead">气象数据仍在云层后方整理。</p>
+          <div class="bulletin-numbers"><div><b id="bulletin-total">—</b><span>今日观测员</span></div><div><b id="bulletin-dominant-rate">—</b><span>主导天气占比</span></div><div><b id="bulletin-variety">—</b><span>出现天气种类</span></div></div>
+          <section class="bulletin-section"><span>今日天气分布</span><div class="bulletin-bars" id="bulletin-bars"></div></section>
+          <section class="bulletin-signals"><div><span>当前时段信号</span><b id="bulletin-period-title">等待更多观测</b><p id="bulletin-period-copy">有足够数据后，气象台会显示不同时段的气团变化。</p></div><div><span>少数天气信号</span><b id="bulletin-rare-title">等待稀有气象</b><p id="bulletin-rare-copy">出现中的少数天气会被记录在这里。</p></div></section>
+          <div class="bulletin-footer"><span>匿名统计 · 不收集具体答案</span><span>BY 卡卡卡卡皮巴拉</span></div>
+        </article>
+        <div class="bulletin-actions"><button class="secondary-button" id="save-bulletin">保存简报图</button><button class="primary-button" id="share-bulletin">分享今日简报 <span>↗</span></button></div>
+        <p class="share-status hidden" id="bulletin-share-status"></p>
+      </section>
+    </main>
+    <section class="atlas-modal hidden" id="atlas-modal" role="dialog" aria-modal="true" aria-labelledby="atlas-title">
+      <div class="atlas-dialog">
+        <button class="atlas-close" id="atlas-close" aria-label="关闭图鉴">×</button>
+        <p class="eyebrow">PERSONAL WEATHER ATLAS</p>
+        <h2 id="atlas-title">精神天气图鉴</h2>
+        <p class="atlas-intro" id="atlas-intro">每一种天气，都算你来过这里的证据。</p>
+        <div class="atlas-grid" id="atlas-grid"></div>
+      </div>
+    </section>
+    <footer>气候会变。你不用一直是晴天。<span class="creator-signature">CREATED BY 卡卡卡卡皮巴拉</span></footer>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
