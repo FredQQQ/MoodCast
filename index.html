@@ -30,12 +30,12 @@
         <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
         <p class="hero-weather">☁</p>
         <h1>今天你的内心，<br />是什么天气？</h1>
-        <p class="intro">不必解释近况。回答五个无关紧要的问题，<br />让我们观测一下你心里的气候。</p>
+        <p class="intro" id="landing-intro">不必解释近况。回答五个无关紧要的问题，<br />让我们观测一下你心里的气候。</p>
         <div class="invite-notice hidden" id="invite-notice"></div>
         <div class="mode-picker" aria-label="观测模式">
           <button class="mode-button" data-mode="quick"><b>快速</b> 1 道题</button>
           <button class="mode-button active" data-mode="standard"><b>标准</b> 5 道题</button>
-          <button class="mode-button" data-mode="night"><b>深夜</b> 温柔播报</button>
+          <button class="mode-button" data-mode="night"><b>深夜</b> 5 道夜间题</button>
         </div>
         <button class="primary-button" id="start-button">开始观测 <span>→</span></button>
         <p class="quiet-note">回答不会上传；历史记录只保存在这台设备。</p>
@@ -52,7 +52,7 @@
       <section class="quiz panel hidden" id="quiz" aria-live="polite">
         <div class="quiz-topline"><span id="question-index">观测 01 / 05</span><span id="question-theme">设备状态</span></div>
         <div class="progress"><i id="progress-bar"></i></div>
-        <p class="eyebrow">请凭第一反应选择</p>
+        <p class="eyebrow" id="question-instruction">请凭第一反应选择</p>
         <h2 id="question-text"></h2>
         <div class="answers" id="answers"></div>
         <button class="back-button" id="back-button">← 返回上一题</button>
@@ -73,17 +73,17 @@
         <article class="weather-card" id="weather-card">
           <div class="card-sky"><span class="sun"></span><span class="cloud cloud-a"></span><span class="cloud cloud-b"></span><span class="mist mist-a"></span><span class="mist mist-b"></span></div>
           <div class="card-top"><span>精神气象台</span><span id="card-date"></span></div>
-          <p class="card-kicker">TODAY'S INNER FORECAST <span class="rare-badge hidden" id="rare-badge">稀有气象</span></p>
+          <p class="card-kicker"><span id="card-kicker-label">TODAY'S INNER FORECAST</span> <span class="rare-badge hidden" id="rare-badge">稀有气象</span></p>
           <p class="weather-symbol" id="weather-symbol">☁</p>
           <h2 id="weather-title">社交大雾</h2>
           <p class="weather-subtitle" id="weather-subtitle"></p>
-          <div class="weather-details"><div><span>精神能见度</span><strong id="visibility"></strong></div><div><span>回复消息体感</span><strong id="reply-temp"></strong></div></div>
+          <div class="weather-details"><div><span id="detail-label-one">精神能见度</span><strong id="visibility"></strong></div><div><span id="detail-label-two">回复消息体感</span><strong id="reply-temp"></strong></div></div>
           <div class="probabilities" id="probabilities"></div>
           <div class="card-extras">
-            <div class="companion"><span>今日伴生动物</span><b id="companion-name"></b><small id="companion-desc"></small></div>
+            <div class="companion"><span id="companion-label">今日伴生动物</span><b id="companion-name"></b><small id="companion-desc"></small></div>
             <div class="fortune"><p><i>宜</i><span id="today-do"></span></p><p><i>忌</i><span id="today-dont"></span></p></div>
           </div>
-          <div class="advice"><span>气象建议</span><p id="advice-text"></p></div>
+          <div class="advice"><span id="advice-label">气象建议</span><p id="advice-text"></p></div>
           <div class="card-footer"><span>MENTAL WEATHER SERVICE</span><span class="creator-card-id">BY 卡卡卡卡皮巴拉</span></div>
         </article></div>
         <p class="result-caption" id="result-caption"></p>

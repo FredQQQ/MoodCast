@@ -85,6 +85,65 @@ const questionBank = [
   ]}
 ];
 
+const nightQuestionBank = [
+  { theme:'今日闭店', text:'如果今天是一家准备打烊的小店，门口现在挂着什么牌子？', answers:[
+    ['A / “还有一点开心，欢迎顺路进来”', {brightness:3, social:1, energy:1}],
+    ['B / “正在安静收拾，明天再见”', {stability:3, kindness:2}],
+    ['C / “营业结束，但灯暂时不关”', {stability:1, humidity:1}],
+    ['D / “盘点中，请不要问今天发生了什么”', {chaos:2, humidity:2, friction:1}],
+    ['E / “今日已耗尽，自动门失去反应”', {energy:-3, social:-2, action:-1}]
+  ]},
+  { theme:'凌晨来信', text:'00:47，手机突然亮了一下，你最希望是谁发来的？', answers:[
+    ['A / 一个会带来新鲜消息的人', {curiosity:3, brightness:2, social:1}],
+    ['B / 一个只说“到家了吗”的人', {kindness:3, social:2, stability:1}],
+    ['C / 外卖软件提醒优惠券快过期', {stability:1}],
+    ['D / 白天的自己发来一份补充说明', {chaos:2, humidity:2}],
+    ['E / 最好谁都不是，我已经下线了', {social:-3, energy:-2, stability:1}]
+  ]},
+  { theme:'脑内关灯', text:'睡前允许你关掉脑子里的一盏灯，你会关掉哪一盏？', answers:[
+    ['A / “明天可能会有好事”的远光灯', {brightness:2, curiosity:2}],
+    ['B / “今天已经做得够多了”的床头灯', {kindness:3, stability:2}],
+    ['C / 没有特定哪盏，整体调暗一点', {stability:2, energy:-1}],
+    ['D / 不断回放尴尬片段的审讯灯', {humidity:2, chaos:2, friction:2}],
+    ['E / 所有灯，包括负责思考明天的那盏', {energy:-3, action:-2, social:-1}]
+  ]},
+  { theme:'天花板气象', text:'现在有一个念头飘在天花板上，它更像什么？', answers:[
+    ['A / 一颗还不想睡的小星星', {brightness:3, curiosity:2, energy:1}],
+    ['B / 一朵正在慢慢散开的云', {stability:3, kindness:1}],
+    ['C / 一个普通的影子，过会儿就没了', {stability:1}],
+    ['D / 一群开会但没有主持人的蚊子', {chaos:3, friction:1}],
+    ['E / 一块压得有点低的乌云', {humidity:3, energy:-2}]
+  ]},
+  { theme:'夜行动物', text:'如果今晚必须变成一种夜行动物，你想怎么度过？', answers:[
+    ['A / 变成猫，去屋顶巡视陌生街区', {curiosity:3, action:2, brightness:1}],
+    ['B / 变成水豚，泡着热水不发表意见', {stability:3, kindness:2}],
+    ['C / 变成守夜的鱼，安静地游来游去', {stability:2, social:-1}],
+    ['D / 变成蝙蝠，同时接收四面八方的回声', {chaos:3, energy:1}],
+    ['E / 变成冬眠失败的熊，再试一次入睡', {energy:-3, action:-2, humidity:1}]
+  ]},
+  { theme:'剩余情绪', text:'今天剩下的一点情绪，比较适合放在哪里过夜？', answers:[
+    ['A / 窗边，让它看看明天会不会来', {brightness:2, curiosity:2, humidity:1}],
+    ['B / 柔软的抽屉里，先替它盖好', {kindness:3, stability:2}],
+    ['C / 桌上，明早看见再处理', {stability:2, action:1}],
+    ['D / 备忘录里，附带十二条补充说明', {chaos:3, humidity:2}],
+    ['E / 门外，今晚不再接待它', {social:-2, energy:-2, friction:1}]
+  ]},
+  { theme:'今日片尾', text:'如果今天结束前只能留一句片尾字幕，你会选？', answers:[
+    ['A / “未完待续，而且有点期待。”', {brightness:3, curiosity:2}],
+    ['B / “大家辛苦了，明天不用太早开机。”', {kindness:3, stability:2}],
+    ['C / “普通的一天顺利存档。”', {stability:3}],
+    ['D / “部分情节仍有争议，暂不解释。”', {chaos:2, humidity:2, friction:1}],
+    ['E / “本集到此为止，请勿播放花絮。”', {energy:-3, social:-2, action:-1}]
+  ]},
+  { theme:'入睡列车', text:'一列开往睡眠的末班车到了，你现在是什么状态？', answers:[
+    ['A / 临时想去别的站看看', {curiosity:3, brightness:2, action:1}],
+    ['B / 已经坐好，窗边位置也很合适', {stability:3, kindness:1}],
+    ['C / 在站台正常等车，没有特别剧情', {stability:2}],
+    ['D / 行李很多，而且每件都是一个念头', {chaos:3, humidity:2}],
+    ['E / 人到了，精神还堵在上一站', {energy:-3, action:-2, friction:1}]
+  ]}
+];
+
 const climates = {
   aurora:{title:'不明原因极光',icon:'✦',mood:'bright',rare:true,sub:['今日高空出现无法解释的明亮活动。','心里有光路过，原因暂时不重要。'],visibility:['无限良好','可见新大陆'],temp:['刚刚好','闪闪发热'],probs:['临时冒险','感染快乐','遇见好事'],advice:['趁极光还在，去做一件平时不会做的小事。','不必追问快乐从哪里来，先让它待一会儿。'],caption:'一种少见天气：你正在真诚地期待今天。',friend:'你今天状态好得有点可疑，建议趁机乱逛。',nature:'这只人类发现了光，并决定暂时不追究来源。'},
   whirlwind:{title:'灵感龙卷风',icon:'↯',mood:'complex',rare:true,sub:['大量念头正在高速形成，请固定好随身物品。','行动和想法同时起飞，桌面暂不保证整洁。'],visibility:['高速变化','满眼都是入口'],temp:['持续升温','热得想开工'],probs:['突然开坑','五线并进','忘记吃饭'],advice:['先接住一个最喜欢的念头，其他的写下来。','龙卷风适合发电，不适合同时盖五栋房子。'],caption:'你不是没有方向，是方向暂时有点多。',friend:'你现在像开了二十个标签页，而且每个都挺有意思。',nature:'这只人类进入创作季，周围纸张开始不安地飞舞。'},
@@ -138,12 +197,43 @@ const reverseForecasts={
   near:{title:'靠近一点',actions:['只联系一个相处最不费力的人，发一个表情也算。','告诉一个人“今天有点想说话”，不必准备完整内容。','和舒服的人共享一首歌、一张照片，或一句没有结论的话。']}
 };
 
+const nightReports={
+  bright:{
+    subtitles:['白天留下的亮度还没有完全熄灭，今晚不急着把它用完。','夜间仍有少量明亮活动，适合开心，但不必趁机熬夜。'],
+    visibility:['星光范围清晰','还能看见明天'],temps:['被窝外偏暖','心里微微发亮'],
+    probs:['舍不得睡','回想好事','期待明天'],
+    advice:['把今天最好的一小段留在备忘录里，然后允许它到此结束。','好心情不需要全部兑换成行动，剩下的可以带进梦里。'],
+    caption:'今晚还有一点光，但你不需要负责让它一直亮着。',dos:['保存好事','调暗灯光','安心收尾'],donts:['临时开坑','透支开心','继续刷新']
+  },
+  calm:{
+    subtitles:['内部风速正在下降，今晚适合让今天安静收尾。','夜间气压平稳，没有必须立刻处理的精神事件。'],
+    visibility:['床边范围清晰','只看得到今晚'],temps:['被窝正好','缓慢降温'],
+    probs:['顺利关机','安静发呆','自然入睡'],
+    advice:['保持现在的低风速，不必为了“好好休息”再完成一套流程。','今晚没有总结也没关系，普通地结束一天就很好。'],
+    caption:'不发生什么，也可以是一个完整的夜晚。',dos:['慢慢洗漱','留一点安静','普通睡觉'],donts:['强行复盘','寻找意义','制造剧情']
+  },
+  complex:{
+    subtitles:['几股没有说完的气团仍在交汇，不必今晚得出结论。','情绪云层层次较多，建议暂停为它们逐一命名。'],
+    visibility:['明暗交替','偶有旧事经过'],temps:['一会儿冷一会儿暖','情绪温差明显'],
+    probs:['脑内重播','突然感慨','睡前灵感'],
+    advice:['把最吵的那个念头写下一句，告诉它明天还有接待时间。','复杂的感受不需要在睡前整理成一个漂亮结论。'],
+    caption:'今晚可以同时有很多感觉，也可以暂时不处理它们。',dos:['写下一句','听熟悉的歌','允许复杂'],donts:['深夜定论','逐条解释','追问自己']
+  },
+  low:{
+    subtitles:['夜间云层偏低，气象台建议暂停解释和自我检讨。','今日剩余电量有限，所有精神任务建议延迟到明天。'],
+    visibility:['只够看清床边','明天暂不可见'],temps:['需要毛毯','低功耗运行'],
+    probs:['不想说话','旧事返场','自动断电'],
+    advice:['今晚先照顾身体：喝一点水、把手机放远，再把剩下的交给明天。','不要在最累的时候审判今天。先睡，结论可以延期。'],
+    caption:'低气压不适合做人生决定，适合把被子盖好。',dos:['停止解释','喝点温水','早点下线'],donts:['深夜复盘','勉强回复','责怪自己']
+  }
+};
+
 const periodLabels={lateNight:'深夜',morning:'上午',afternoon:'下午',evening:'晚间'};
 let activeQuestions=[], current=0, chosen=[], currentClimate='mixed', selectedMode='standard', questionTotal=5, invitedClimate=null, selectedGift='sun', receivedGift=null, publicWeatherData=null, bulletinReturn='landing';
 const $=id=>document.getElementById(id);
 const random=list=>list[Math.floor(Math.random()*list.length)];
 const shuffle=list=>[...list].sort(()=>Math.random()-.5);
-function startRound(){questionTotal=selectedMode==='quick'?1:5;activeQuestions=shuffle(questionBank).slice(0,questionTotal);current=0;chosen=[];$('feedback-thanks').classList.add('hidden');$('accuracy-check').querySelector('div').classList.remove('hidden');$('reveal-cloud').classList.remove('open');$('weather-stage').classList.add('covered');}
+function startRound(){questionTotal=selectedMode==='quick'?1:5;const source=selectedMode==='night'?nightQuestionBank:questionBank;activeQuestions=shuffle(source).slice(0,questionTotal);current=0;chosen=[];$('feedback-thanks').classList.add('hidden');$('accuracy-check').querySelector('div').classList.remove('hidden');$('reveal-cloud').classList.remove('open');$('weather-stage').classList.add('covered');}
 function score(){const s={energy:0,brightness:0,social:0,action:0,humidity:0,stability:0,curiosity:0,kindness:0,chaos:0,friction:0};chosen.forEach((a,i)=>Object.entries(activeQuestions[i].answers[a][1]).forEach(([k,v])=>s[k]+=v));if(questionTotal===1)Object.keys(s).forEach(k=>s[k]*=5);return s;}
 function selectClimate(s){
   if(s.brightness>=8&&s.curiosity>=7)return'aurora';
@@ -167,10 +257,10 @@ function selectClimate(s){
   if(s.kindness>=4&&s.brightness>=0)return'recovery';
   return'mixed';
 }
-function renderQuestion(){const q=activeQuestions[current];$('question-index').textContent=`观测 ${String(current+1).padStart(2,'0')} / ${String(questionTotal).padStart(2,'0')}`;$('question-theme').textContent=q.theme;$('progress-bar').style.width=`${(current/questionTotal)*100}%`;$('question-text').textContent=q.text;$('answers').innerHTML='';q.answers.forEach(([text],i)=>{const button=document.createElement('button');const[lead,...rest]=text.split(' / ');button.className='answer';button.innerHTML=`<b>${lead}</b>${rest.join(' / ')}`;button.onclick=()=>choose(i);$('answers').appendChild(button)});$('back-button').style.visibility=current?'visible':'hidden';}
+function renderQuestion(){const q=activeQuestions[current];$('question-index').textContent=`${selectedMode==='night'?'夜间观测':'观测'} ${String(current+1).padStart(2,'0')} / ${String(questionTotal).padStart(2,'0')}`;$('question-theme').textContent=q.theme;$('question-instruction').textContent=selectedMode==='night'?'请凭今晚的第一反应选择':'请凭第一反应选择';$('progress-bar').style.width=`${(current/questionTotal)*100}%`;$('question-text').textContent=q.text;$('answers').innerHTML='';q.answers.forEach(([text],i)=>{const button=document.createElement('button');const[lead,...rest]=text.split(' / ');button.className='answer';button.innerHTML=`<b>${lead}</b>${rest.join(' / ')}`;button.onclick=()=>choose(i);$('answers').appendChild(button)});$('back-button').style.visibility=current?'visible':'hidden';}
 function choose(answer){chosen[current]=answer;if(current<questionTotal-1){current++;renderQuestion()}else showResult();}
 function probability(i){return 38+Math.floor(Math.random()*48)-i*2;}
-function fillResult(){const c=climates[currentClimate],extra=weatherExtras[currentClimate];$('weather-card').dataset.mood=c.mood;$('weather-title').textContent=c.title;$('weather-symbol').textContent=c.icon;$('rare-badge').classList.add('hidden');$('weather-subtitle').textContent=random(c.sub);$('visibility').textContent=random(c.visibility);$('reply-temp').textContent=random(c.temp);let advice=random(c.advice);if(selectedMode==='night')advice=`夜间提示：${advice}`;$('advice-text').textContent=advice;$('result-caption').textContent=c.caption;$('probabilities').innerHTML=c.probs.map((p,i)=>`<div class="probability"><span>${p}</span><b>${probability(i)}%</b></div>`).join('');$('companion-name').textContent=extra.animal;$('companion-desc').textContent=extra.desc;$('today-do').textContent=random(extra.dos);$('today-dont').textContent=random(extra.donts);updatePersonalWeather();}
+function fillResult(){const c=climates[currentClimate],extra=weatherExtras[currentClimate],night=selectedMode==='night'?nightReports[c.mood]:null;$('weather-card').dataset.mood=c.mood;$('weather-card').dataset.mode=selectedMode;$('weather-title').textContent=c.title;$('weather-symbol').textContent=c.icon;$('rare-badge').classList.add('hidden');$('card-kicker-label').textContent=night?"TONIGHT'S INNER REPORT":"TODAY'S INNER FORECAST";$('detail-label-one').textContent=night?'睡前能见度':'精神能见度';$('detail-label-two').textContent=night?'入睡前体感':'回复消息体感';$('companion-label').textContent=night?'夜间伴生动物':'今日伴生动物';$('advice-label').textContent=night?'今晚的小建议':'气象建议';$('weather-subtitle').textContent=random(night?.subtitles||c.sub);$('visibility').textContent=random(night?.visibility||c.visibility);$('reply-temp').textContent=random(night?.temps||c.temp);$('advice-text').textContent=random(night?.advice||c.advice);$('result-caption').textContent=night?night.caption:c.caption;const signals=night?.probs||c.probs;$('probabilities').innerHTML=signals.map((p,i)=>`<div class="probability"><span>${p}</span><b>${probability(i)}%</b></div>`).join('');$('companion-name').textContent=extra.animal;$('companion-desc').textContent=extra.desc;$('today-do').textContent=random(night?.dos||extra.dos);$('today-dont').textContent=random(night?.donts||extra.donts);updatePersonalWeather();}
 function readHistory(){try{return JSON.parse(localStorage.getItem('moodcast-history')||'[]')}catch{return[]}}
 function readAtlas(){try{const saved=JSON.parse(localStorage.getItem('moodcast-atlas')||'[]'),fromHistory=readHistory().map(item=>item.climate);return[...new Set([...saved,...fromHistory])].filter(key=>climates[key])}catch{return[]}}
 function unlockClimate(){try{const atlas=[...new Set([...readAtlas(),currentClimate])];localStorage.setItem('moodcast-atlas',JSON.stringify(atlas));renderAtlas()}catch{}}
@@ -221,7 +311,7 @@ const inviteParam=rawInviteParam&&(climates[rawInviteParam]?rawInviteParam:Objec
 const rawGiftParam=new URLSearchParams(location.search).get('gift');
 if(rawGiftParam&&gifts[rawGiftParam])receivedGift=rawGiftParam;
 if(inviteParam){invitedClimate=inviteParam;const giftLine=receivedGift?`，还捎来${gifts[receivedGift].label}。${gifts[receivedGift].message}`:'。';$('invite-notice').textContent=`一位朋友从「${climates[inviteParam].title}」向你发来联合观测邀请${giftLine}`;$('invite-notice').classList.remove('hidden');}
-document.querySelectorAll('.mode-button').forEach(button=>button.onclick=()=>{selectedMode=button.dataset.mode;document.querySelectorAll('.mode-button').forEach(b=>b.classList.toggle('active',b===button));$('start-button').innerHTML=selectedMode==='quick'?'一题出结果 <span>→</span>':selectedMode==='night'?'开始夜间观测 <span>→</span>':'开始观测 <span>→</span>';});
+document.querySelectorAll('.mode-button').forEach(button=>button.onclick=()=>{selectedMode=button.dataset.mode;document.querySelectorAll('.mode-button').forEach(b=>b.classList.toggle('active',b===button));$('start-button').innerHTML=selectedMode==='quick'?'一题出结果 <span>→</span>':selectedMode==='night'?'开始今晚的观测 <span>→</span>':'开始观测 <span>→</span>';$('landing-intro').innerHTML=selectedMode==='night'?'不总结今天，也不急着想明天。回答五个夜间问题，<br />看看此刻适合怎样结束这一天。':'不必解释近况。回答五个无关紧要的问题，<br />让我们观测一下你心里的气候。';});
 $('start-button').onclick=()=>{startRound();$('landing').classList.add('hidden');$('quiz').classList.remove('hidden');renderQuestion();};
 $('brand-home').onclick=event=>{event.preventDefault();restart();};
 $('back-button').onclick=()=>{if(current){current--;chosen.pop();renderQuestion();}};
@@ -243,6 +333,6 @@ function bulletinShareText(){const headline=publicHeadline(publicWeatherData),da
 function showBulletinStatus(text){$('bulletin-share-status').textContent=text;$('bulletin-share-status').classList.remove('hidden');setTimeout(()=>$('bulletin-share-status').classList.add('hidden'),2200);}
 $('share-bulletin').onclick=async()=>{const url=new URL(location.href);url.search='';url.hash='';const text=bulletinShareText();try{if(navigator.share)await navigator.share({title:'今日人类精神天气',text,url:url.toString()});else{await navigator.clipboard.writeText(`${text}\n\n${url}`);showBulletinStatus('今日简报和链接已复制');}}catch{try{await navigator.clipboard.writeText(`${text}\n\n${url}`);showBulletinStatus('今日简报和链接已复制');}catch{showBulletinStatus('暂时无法分享，请直接截图保存');}}};
 $('save-bulletin').onclick=async()=>{const b=$('save-bulletin');b.textContent='正在生成…';try{if(!window.html2canvas)throw new Error('library unavailable');const canvas=await html2canvas($('bulletin-card'),{scale:2,backgroundColor:null,useCORS:true});const link=document.createElement('a');link.download=`Moodcast-今日气象简报-${localDateKey()}.png`;link.href=canvas.toDataURL('image/png');link.click();b.textContent='已保存 ✓';}catch{b.textContent='保存失败，请截图';}setTimeout(()=>b.textContent='保存简报图',1800);};
-$('share-button').onclick=async()=>{const url=new URL(location.href);url.search='';url.searchParams.set('from',currentClimate);url.searchParams.set('gift',selectedGift);url.hash='moodcast-invite';const text=`我的内心今天是「${climates[currentClimate].title}」，还给你捎了${gifts[selectedGift].label}。你那里是什么天气？\n——来自卡卡卡卡皮巴拉的精神气象台`;const copied=`${text}\n\n邀请链接：\n${url.toString()}`;const showCopied=()=>{$('share-status').textContent='气象物资和邀请链接已复制';$('share-status').classList.remove('hidden');setTimeout(()=>$('share-status').classList.add('hidden'),2200);};try{if(navigator.share){await navigator.share({title:'Moodcast · 卡卡卡卡皮巴拉',text,url:url.toString()});}else{await navigator.clipboard.writeText(copied);showCopied();}}catch{try{await navigator.clipboard.writeText(copied);showCopied();}catch{$('share-status').textContent='暂时无法调用分享，请在上线后的 HTTPS 页面重试';$('share-status').classList.remove('hidden');}}}
+$('share-button').onclick=async()=>{const url=new URL(location.href);url.search='';url.searchParams.set('from',currentClimate);url.searchParams.set('gift',selectedGift);url.hash='moodcast-invite';const moment=selectedMode==='night'?'今晚':'今天';const text=`我的内心${moment}是「${climates[currentClimate].title}」，还给你捎了${gifts[selectedGift].label}。你那里是什么天气？\n——来自卡卡卡卡皮巴拉的精神气象台`;const copied=`${text}\n\n邀请链接：\n${url.toString()}`;const showCopied=()=>{$('share-status').textContent='气象物资和邀请链接已复制';$('share-status').classList.remove('hidden');setTimeout(()=>$('share-status').classList.add('hidden'),2200);};try{if(navigator.share){await navigator.share({title:'Moodcast · 卡卡卡卡皮巴拉',text,url:url.toString()});}else{await navigator.clipboard.writeText(copied);showCopied();}}catch{try{await navigator.clipboard.writeText(copied);showCopied();}catch{$('share-status').textContent='暂时无法调用分享，请在上线后的 HTTPS 页面重试';$('share-status').classList.remove('hidden');}}}
 $('download-button').onclick=async()=>{const b=$('download-button');b.textContent='正在保存…';try{if(!window.html2canvas)throw new Error('library unavailable');const canvas=await html2canvas($('weather-card'),{scale:2,backgroundColor:null,useCORS:true});const link=document.createElement('a');link.download=`Moodcast-${climates[currentClimate].title}.png`;link.href=canvas.toDataURL('image/png');link.click();b.innerHTML='已保存 <span>✓</span>';}catch(e){b.textContent='保存失败，请截图';}setTimeout(()=>b.innerHTML='保存天气卡 <span>↓</span>',1800);};
 renderHistory();renderAtlas();restoreReverseForecast();loadPublicWeather();
